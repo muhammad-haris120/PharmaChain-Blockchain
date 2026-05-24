@@ -1,262 +1,299 @@
 {
     "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
         {
-        "inputs": [],
-        "stateMutability": "nonpayable",
-        "type": "constructor"
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
         },
         {
-        "anonymous": false,
-        "inputs": [
-            {
-            "indexed": true,
-            "internalType": "uint256",
-            "name": "id",
-            "type": "uint256"
-            },
-            {
-            "indexed": true,
-            "internalType": "address",
-            "name": "oldOwner",
-            "type": "address"
-            },
-            {
-            "indexed": true,
-            "internalType": "address",
-            "name": "newOwner",
-            "type": "address"
-            }
-        ],
-        "name": "OwnershipTransferred",
-        "type": "event"
+          "indexed": true,
+          "internalType": "address",
+          "name": "oldOwner",
+          "type": "address"
         },
         {
-        "anonymous": false,
-        "inputs": [
-            {
-            "indexed": true,
-            "internalType": "uint256",
-            "name": "id",
-            "type": "uint256"
-            },
-            {
-            "indexed": false,
-            "internalType": "string",
-            "name": "name",
-            "type": "string"
-            },
-            {
-            "indexed": true,
-            "internalType": "address",
-            "name": "owner",
-            "type": "address"
-            }
-        ],
-        "name": "ProductRegistered",
-        "type": "event"
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
         },
         {
-        "anonymous": false,
-        "inputs": [
-            {
-            "indexed": true,
-            "internalType": "uint256",
-            "name": "id",
-            "type": "uint256"
-            },
-            {
-            "indexed": false,
-            "internalType": "enum PharmaChain.Status",
-            "name": "status",
-            "type": "uint8"
-            }
-        ],
-        "name": "StatusUpdated",
-        "type": "event"
-        },
-        {
-        "inputs": [
-            {
-            "internalType": "address",
-            "name": "account",
-            "type": "address"
-            },
-            {
-            "internalType": "uint256",
-            "name": "role",
-            "type": "uint256"
-            }
-        ],
-        "name": "assignRole",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-        },
-        {
-        "inputs": [],
-        "name": "contractOwner",
-        "outputs": [
-            {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-        },
-        {
-        "inputs": [],
-        "name": "nextProductId",
-        "outputs": [
-            {
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-        },
-        {
-        "inputs": [
-            {
-            "internalType": "uint256",
-            "name": "productId",
-            "type": "uint256"
-            }
-        ],
-        "name": "productExists",
-        "outputs": [
-            {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-        },
-        {
-        "inputs": [
-            {
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-            }
-        ],
-        "name": "productExistsMap",
-        "outputs": [
-            {
-            "internalType": "bool",
-            "name": "",
-            "type": "bool"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-        },
-        {
-        "inputs": [
-            {
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-            }
-        ],
-        "name": "products",
-        "outputs": [
-            {
-            "internalType": "uint256",
-            "name": "id",
-            "type": "uint256"
-            },
-            {
-            "internalType": "string",
-            "name": "name",
-            "type": "string"
-            },
-            {
-            "internalType": "address",
-            "name": "owner",
-            "type": "address"
-            },
-            {
-            "internalType": "enum PharmaChain.Status",
-            "name": "status",
-            "type": "uint8"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-        },
-        {
-        "inputs": [
-            {
-            "internalType": "string",
-            "name": "name",
-            "type": "string"
-            }
-        ],
-        "name": "registerProduct",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-        },
-        {
-        "inputs": [
-            {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-            }
-        ],
-        "name": "roles",
-        "outputs": [
-            {
-            "internalType": "enum PharmaChain.Role",
-            "name": "",
-            "type": "uint8"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-        },
-        {
-        "inputs": [
-            {
-            "internalType": "uint256",
-            "name": "productId",
-            "type": "uint256"
-            },
-            {
-            "internalType": "address",
-            "name": "newOwner",
-            "type": "address"
-            }
-        ],
-        "name": "transferOwnership",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-        },
-        {
-        "inputs": [
-            {
-            "internalType": "uint256",
-            "name": "productId",
-            "type": "uint256"
-            },
-            {
-            "internalType": "enum PharmaChain.Status",
-            "name": "newStatus",
-            "type": "uint8"
-            }
-        ],
-        "name": "updateStatus",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "time",
+          "type": "uint256"
         }
-    ]
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "time",
+          "type": "uint256"
+        }
+      ],
+      "name": "ProductRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum PharmaChain.Status",
+          "name": "status",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "time",
+          "type": "uint256"
+        }
+      ],
+      "name": "StatusUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DISTRIBUTOR_TIME_LIMIT",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "role",
+          "type": "uint256"
+        }
+      ],
+      "name": "assignRole",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "contractOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nextProductId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "productExistsMap",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "products",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "enum PharmaChain.Status",
+          "name": "status",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "registeredAt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "distributedAt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "retailingAt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "soldAt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "lastTransferAt",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "registerProduct",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "roles",
+      "outputs": [
+        {
+          "internalType": "enum PharmaChain.Role",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "productId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "buyer",
+          "type": "address"
+        }
+      ],
+      "name": "sellProduct",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "productId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
 }

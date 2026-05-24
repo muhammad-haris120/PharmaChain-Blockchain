@@ -1,6 +1,8 @@
 {
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/vite": "^4.1.18",
     "chai": "^4.5.0",
     "hardhat": "^2.27.2"
   },

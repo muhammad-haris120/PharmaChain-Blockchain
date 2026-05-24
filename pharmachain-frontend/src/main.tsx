@@ -11,7 +11,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
       <WalletProvider>
         <PharmaChainProvider>
-          <App />
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+            <App />
+          </div>
         </PharmaChainProvider>
       </WalletProvider>
     </BrowserRouter>
